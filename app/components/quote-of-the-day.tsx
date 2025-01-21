@@ -11,7 +11,7 @@ export function QuoteOfTheDay() {
   const fetchQuote = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch("https://api.quotable.io/random");
+      const response = await fetch("https://quoteproxy.vercel.app/");
       if (!response.ok) {
         throw new Error("Failed to fetch quote");
       }
