@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --spark-red: #ff4b6e;
+  --spark-orange: #ff8a2c;
+  --spark-green: #4cd964;
+  --spark-blue: #4a90e2;
+  --spark-yellow: #ffd60a;
+  --spark-cream: #fff9f0;
+}
+
+@layer base {
+  body {
+    @apply bg-[#FFF9F0];
+  }
+}
+
+.bubblegum {
+  font-family: "Bubblegum Sans", cursive;
+}
+
+.text-3d {
+  text-shadow: 3px 3px 0 #00000020;
+}
+
+.card-3d {
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+}
+
+.card-3d-content {
+  transform: translateZ(20px);
+}
+
+.floating {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.bouncing {
+  animation: bouncing 1s ease-in-out infinite;
+}
+
+@keyframes bouncing {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.sparkle {
+  position: relative;
+}
+
+.sparkle::before {
+  content: "✨";
+  position: absolute;
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+  0%,
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
