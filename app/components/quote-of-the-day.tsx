@@ -11,14 +11,14 @@ export function QuoteOfTheDay() {
   const fetchQuote = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch("https://zenquotes.io/api/random");
+      const response = await fetch("https://api.quotable.io/quotes/random");
       if (!response.ok) {
         throw new Error("Failed to fetch quote");
       }
       const data = await response.json();
-      const randomQuote = data[0]; // ZenQuotes returns an array with a single quote object
-      setQuote(randomQuote.q); // `q` is the quote text
-      setAuthor(randomQuote.a); // `a` is the author
+      const randomQuote = data[0]; // Quotable returns an array with a single quote object
+      setQuote(randomQuote.content); // `content` is the quote text
+      setAuthor(randomQuote.author); // `author` is the author
     } catch (error) {
       console.error("Error fetching quote:", error);
       setQuote("Oops! Failed to fetch a quote. Please try again.");
