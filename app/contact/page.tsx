@@ -70,7 +70,7 @@ export default function Contact() {
                 <span className="text-[#4A90E2]">Touch</span>
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Have questions? We&apos;d love to hear from you! Send us a message and we&apos;ll respond as soon as possible.
+                Have questions? We&apos;d love to hear from you! Send us a message and we&apos;ll respond as soon as possible.(This form is not working for now please do click on the Whatsapp number to connect!)
               </p>
             </motion.div>
 
